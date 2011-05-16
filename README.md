@@ -1,32 +1,43 @@
-vgod's vimrc
+hSATAC's vimrc
 ============
-Author: Tsung-Hsiang (Sean) Chang <vgod@vgod.tw>
+Author: Ash Wu (aka. cAt) <hsatac@gmail.com>
 
-Fork me on GITHUB  https://github.com/vgod/vimrc.
+Forked from vgod's vimrc  https://github.com/vgod/vimrc.
 
 HOW TO INSTALL
 --------------
 
 1. Check out from github
 
-        $ git clone https://github.com/vgod/vimrc ~/.vim
+        $ git clone https://github.com/hsatac/vimrc ~/.vim
         $ cd ~/.vim
         $ git submodule update --init
 
 2. Install ~/.vimrc and ~/.gvimrc
 
+        TODO:how to install on Win32 Platform
+
         $ ./install-vimrc.sh
 
 3. (Optional, if you want Command-T) Compile the Command-T plugin
 
+        TODO:how to compile Command-T on Win32 platform
+
         $ cd .vim/bundle/command-t/ruby/command-t
         $ ruby extconf.rb
         $ make
-  
+
+4. (Optional, if you want taglist) Install the Exuberant Ctags (http://ctags.sourceforge.net/)
+
+        TODO::how to compile ctags on Win32 platform
+
+        Mac Os: The built-in ctags is not compitable with taglist.vim
+        $ brew install ctags
+
 UPGRADE PLUGIN BUNDLES
 ----------------------
 
-All plugins (except vim-latex) were checked out as git submodules, 
+All plugins were checked out as git submodules, 
 which can be upgraded with `git pull`. For example, to upgrade Command-T 
 
      $ cd ~/.vim/bundle/command-t
@@ -54,8 +65,6 @@ PLUGINS
 
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages. 
 
-* [xmledit](http://www.vim.org/scripts/script.php?script_id=301): XML/HTML tags will be completed automatically.
-
 * [Command-T](https://github.com/wincent/Command-T): open and navigate between files with `cmd-t`.
   
 * [SuperTab](http://www.vim.org/scripts/script.php?script_id=1643): Do all your insert-mode completion with Tab.
@@ -70,25 +79,15 @@ PLUGINS
 
 * [VisIncr](http://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
   
-* [Cute Error Marker](http://www.vim.org/scripts/script.php?script_id=2653): showing error and warning icons on line.
-  
-   Note: MacVim users need to enable "Use experimental renderer" to see
-   graphical icons.
+* [Zoom](https://github.com/vim-scripts/zoom.vim): Use +, -, 0 keys to zoom in/out like firefox or macvim.
 
-* [vim-latex](http://vim-latex.sourceforge.net/): Latex support.
-
-* [OmniCppComplete](http://www.vim.org/scripts/script.php?script_id=1520): C/C++ omni-completion with ctags database.
-
-* [JavaComplete](http://www.vim.org/scripts/script.php?script_id=1785): Java Omni-completion.
-
+* [taglist](https://github.com/vim-scripts/taglist.vim): taglist, list functions, structures.
 
 Language specific supports
 --------------------------
 
-* Latex: Read `:help latex-suite.txt`
 * Restructured Text: `ctrl-u 1~5` inserts Part/Chapter/Section headers
-* HTML, Javascript, Python, CSS, C, C++, Java: use `TAB` to do omni-completion.
-* HTML/XML: End tags are automatically completed after typing a begin tag. (Typing > twice pushes the end tag to a new line.)
+* Javascript, Python, CSS, C, PHP, Ruby: use `TAB` to do omni-completion.
 
 Other good references
 ---------------------
