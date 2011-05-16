@@ -38,7 +38,6 @@ if has("gui_running")	" GUI color and font settings
     set t_Co=256          " 256 color mode
     set cursorline        " highlight current line
     colors railscasts
-    au GUIEnter * simalt ~x         " 開啟最大化.
 else
     " terminal color settings
     colors vgod

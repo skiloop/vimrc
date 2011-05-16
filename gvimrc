@@ -4,4 +4,7 @@ if has("gui_macvim")
    " map Cmd-T to the CommandT plugin
    map <D-t> :CommandT<CR>
 endif
+if has("win32")
+    au GUIEnter * simalt ~x         " 開啟最大化.
+endif
 
