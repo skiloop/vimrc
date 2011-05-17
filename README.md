@@ -9,13 +9,21 @@ HOW TO INSTALL
 
 1. Check out from github
 
-        $ git clone https://github.com/hSATAC/vimrc ~/.vim
-        $ cd ~/.vim
-        $ git submodule update --init
+ * Mac Os:
+
+            $ git clone https://github.com/hSATAC/vimrc ~/.vim
+            $ cd ~/.vim
+            $ git submodule update --init
+
+ * Windows: (or you could checkout into your $VIM if you want to build a portable gvim)
+
+            $ git clone https://github.com/hSATAC/vimrc ~/vimfiles
+            $ cd ~/vimfiles
+            $ git submodule update --init            
 
 2. Install ~/.vimrc and ~/.gvimrc
 
- * Macos:
+ * Mac Os:
 
             $ ./install-vimrc.sh
 
