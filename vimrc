@@ -224,13 +224,13 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     " enable omni completion. (ctrl-x ctrl-o)
     set cot=menuone,preview
     autocmd insertleave * if pumvisible() == 0|pclose|endif
-    autocmd filetype html,markdown setlocal omnifunc=htmlcomplete#completetags
-    autocmd filetype javascript setlocal omnifunc=javascriptcomplete#completejs
-    autocmd filetype python setlocal omnifunc=pythoncomplete#complete
+    autocmd filetype html,markdown setlocal omnifunc=htmlcomplete#Completetags
+    autocmd filetype javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd filetype python setlocal omnifunc=pythoncomplete#Complete
     autocmd filetype xml setlocal omnifunc=xmlcomplete#completetags
-    autocmd filetype css set omnifunc=csscomplete#completecss
-    autocmd filetype c set omnifunc=ccomplete#complete
-    autocmd filetype java set omnifunc=javacomplete#complete
+    autocmd filetype css set omnifunc=csscomplete#CompleteCSS
+    autocmd filetype c set omnifunc=ccomplete#Complete
+    autocmd filetype java set omnifunc=javacomplete#Complete
     autocmd filetype php set omnifunc=phpcomplete#CompletePHP
     autocmd FileType ruby set omnifunc=rubycomplete#Complete
 
