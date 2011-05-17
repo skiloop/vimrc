@@ -1,3 +1,3 @@
 cd ..
-mklink _vimrc vimfiles\vimrc
-mklink _gvimrc vimfiles\gvimrc
+mklink /H _vimrc vimfiles\vimrc
+mklink /H _gvimrc vimfiles\gvimrc

@@ -294,7 +294,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
     " --- Command-T
     let g:CommandTMaxHeight = 15
-    if(has("gui_running") && !has("win32")) " gvim win 32
+    if(has("gui_running") && has("win32")) " gvim win 32
         map <A-t> :CommandT<CR>
     endif
     if(has("gui_macvim") && !has("gui_running")) " macvim console
@@ -311,7 +311,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
     " --- Zoom.vim
 
-    if(has("gui_running") && !has("win32")) " gvim win 32
+    if(has("gui_running") && has("win32")) " gvim win 32
         map <C-kPlus> :ZoomIn<CR>
         map <C-kMinus> :ZoomOut<CR>
         map <C-k0> :ZoomReset<CR>
