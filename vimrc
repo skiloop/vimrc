@@ -161,6 +161,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
         map ÷ :tabclose<CR> 
     endif
     if(has("gui_macvim") && !has("gui_running")) " macvim console
+        map w :tabclose<CR>
     endif
 
     " ,/ turn off search highlighting
