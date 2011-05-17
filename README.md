@@ -2,37 +2,49 @@ hSATAC's vimrc
 ============
 Author: Ash Wu (aka. cAt) <hsatac@gmail.com>
 
-Forked from vgod's vimrc  https://github.com/vgod/vimrc.
+Forked from vgod's vimrc  https://github.com/vgod/vimrc
 
 HOW TO INSTALL
 --------------
 
 1. Check out from github
 
-        $ git clone https://github.com/hsatac/vimrc ~/.vim
+        $ git clone https://github.com/hSATAC/vimrc ~/.vim
         $ cd ~/.vim
         $ git submodule update --init
 
 2. Install ~/.vimrc and ~/.gvimrc
 
-        TODO:how to install on Win32 Platform
+ * Macos:
 
-        $ ./install-vimrc.sh
+            $ ./install-vimrc.sh
+
+ * Windows7:
+
+            > install-win32.bat
 
 3. (Optional, if you want Command-T) Compile the Command-T plugin
 
-        TODO:how to compile Command-T on Win32 platform
+  * Mac Os:
 
-        $ cd .vim/bundle/command-t/ruby/command-t
-        $ ruby extconf.rb
-        $ make
+            $ cd .vim/bundle/command-t/ruby/command-t
+            $ ruby extconf.rb
+            $ make
+
+ * Windows:
+
+            TODO
 
 4. (Optional, if you want taglist) Install the Exuberant Ctags (http://ctags.sourceforge.net/)
 
-        TODO::how to compile ctags on Win32 platform
+ * Mac Os: The built-in ctags is not compitable with taglist.vim
 
-        Mac Os: The built-in ctags is not compitable with taglist.vim
-        $ brew install ctags
+            $ brew install ctags
+
+ * Windows:
+
+            Download win32 ctags from http://ctags.sourceforge.net/
+            put ctags.exe into your $VIM
 
 UPGRADE PLUGIN BUNDLES
 ----------------------
