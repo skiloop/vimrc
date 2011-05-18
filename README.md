@@ -41,7 +41,7 @@ HOW TO INSTALL
 
  * Windows:
 
-            TODO
+            see: http://blog.hsatac.net/?p=414
 
 4. (Optional, if you want taglist) Install the Exuberant Ctags (http://ctags.sourceforge.net/)
 
