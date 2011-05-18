@@ -44,9 +44,10 @@ hi link htmlTag                     xmlTag
 hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag
 
-highlight Normal                    guifg=#E6E1DC guibg=#111111 
-highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15	
-highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
+"highlight Normal                    guifg=#E6E1DC guibg=#111111 
+highlight Normal                    guifg=#E6E1DC guibg=#222222
+highlight Cursor                    guifg=#191919 ctermfg=0 guibg=#FFFFFF ctermbg=15	
+highlight CursorLine                guibg=#191919 ctermbg=233 cterm=NONE
 
 highlight Comment                   guifg=#BC9458 ctermfg=180 gui=italic
 highlight Constant                  guifg=#6D9CBE ctermfg=73
