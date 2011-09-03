@@ -302,13 +302,15 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
         map t :CommandT<CR>
     endif
     " --- taglist
-    nmap <silent><f1> :TlistToggle<CR>
-    imap <silent><F1> <C-o>:TlistToggle<CR>
-    let Tlist_Use_SingleClick = 1
-    let Tlist_Use_Right_Window = 1
-    let Tlist_Show_One_File = 1
-    let tlist_php_settings = 'php;c:class;d:constant;f:function'
-
+    "nmap <silent><f1> :TlistToggle<CR>
+    "imap <silent><F1> <C-o>:TlistToggle<CR>
+    "let Tlist_Use_SingleClick = 1
+    "let Tlist_Use_Right_Window = 1
+    "let Tlist_Show_One_File = 1
+    "let tlist_php_settings = 'php;c:class;d:constant;f:function'
+    " --- tagbar
+    nnoremap <silent><F7> :TagbarToggle<CR>
+    let g:tagbar_autofocus = 1
 
     " --- Zoom.vim
 
