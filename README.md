@@ -62,6 +62,9 @@ which can be upgraded with `git pull`. For example, to upgrade Command-T
 
      $ cd ~/.vim/bundle/command-t
      $ git pull
+     
+     // update all bundles
+     $ git submodule foreach git pull origin master
 
 HOW TO USE
 ----------
