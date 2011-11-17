@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='ftp://cat@219.85.64.250:168/'
-let g:netrw_dirhist_2='ftp://cat@219.85.64.250:168/web/'
-let g:netrw_dirhist_3='ftp://cat@219.85.64.250:168/web/www.gamebase.com.tw/'
-let g:netrw_dirhist_4='ftp://cat@219.85.64.250:168/web/www.gamebase.com.tw/etc/'
-let g:netrw_dirhist_5='/Users/cat/Dropbox/Code/Ruby/ruby_koans/koans'

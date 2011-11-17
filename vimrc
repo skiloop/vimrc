@@ -161,7 +161,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
   " close tab
   map <C-t><C-w> :tabclose<CR> 
 
-  if(has("gui_running") && has("win32")) " gvim win 32
+  if(has("gui_running") && !has("mac")) " gvim win 32 and gvim linux
     map ÷ :tabclose<CR> 
   endif
   if(has("gui_macvim") && !has("gui_running")) " macvim console
@@ -299,11 +299,17 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
   " --- Command-T
   let g:CommandTMaxHeight = 15
-  if(has("gui_running") && has("win32")) " gvim win 32
-    map <A-t> :CommandT<CR>
+  if(has("gui_running")) 
+    if(has("win32")) " win32 gvim
+      map <A-t> :CommandT<CR>
+    elseif(has("mac")) "mac gvim
+      map <D-t> :CommandT<CR>
+    else " linux gvim
+      map ô :CommandT<CR>
+    endif
   endif
-  if(has("gui_macvim") && !has("gui_running")) " macvim console
-    map t :CommandT<CR>
+  if(!has("gui_running")) 
+      map t :CommandT<CR>
   endif
   " --- taglist
   "nmap <silent><f1> :TlistToggle<CR>

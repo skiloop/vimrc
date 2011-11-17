@@ -9,7 +9,7 @@ HOW TO INSTALL
 
 1. Check out from github
 
- * Mac Os:
+ * Mac Os/Linux:
 
             $ git clone https://github.com/hSATAC/vimrc ~/.vim
             $ cd ~/.vim
@@ -23,7 +23,7 @@ HOW TO INSTALL
 
 2. Install ~/.vimrc and ~/.gvimrc
 
- * Mac Os:
+ * Mac Os/Linux:
 
             $ ./install-vimrc.sh
 
@@ -33,7 +33,7 @@ HOW TO INSTALL
 
 3. (Optional, if you want Command-T) Compile the Command-T plugin
 
-  * Mac Os:
+  * Mac Os/Linux:
 
             $ cd .vim/bundle/command-t/ruby/command-t
             $ ruby extconf.rb
@@ -48,6 +48,9 @@ HOW TO INSTALL
  * Mac Os: The built-in ctags is not compitable with taglist.vim
 
             $ brew install ctags
+
+ * ArchLinux:
+            sudo pacman -S ctags
 
  * Windows:
 
