@@ -109,6 +109,8 @@ PLUGINS
 
 * [taglist](https://github.com/vim-scripts/taglist.vim): taglist, list functions, structures.
 
+* [tagbar](http://majutsushi.github.com/tagbar/): tagbar, Vim plugin that displays tags in a window, ordered by class etc.
+
 Language specific supports
 --------------------------
 
