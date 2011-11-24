@@ -128,13 +128,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
   "replace the current word in all opened buffers
   map <leader>r :call Replace()<CR>
 
-  " open the error console
-  map <leader>cc :botright cope<CR> 
-  " move to next error
-  map <leader>] :cn<CR>
-  " move to the prev error
-  map <leader>[ :cp<CR>
-
   " --- move around splits {
   " move to and maximize the below split 
   map <C-J> <C-W>j<C-W>_
