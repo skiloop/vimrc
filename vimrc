@@ -268,7 +268,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
   " --- AutoClose - Inserts matching bracket, paren, brace or quote 
   " fixed the arrow key problems caused by AutoClose
   if !has("gui_running")	
-
     set term=linux
     set t_k1=[11~
     set t_k2=[11~
@@ -283,6 +282,14 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     nmap OB j
     nmap OC l
     nmap OD h
+    if $TERM =~ 'xterm'
+      set <F1>=OP
+      set <F2>=OQ
+      set <F3>=OR
+      set <F4>=OS
+      set <Home>=OH
+      set <End>=OF
+    endif
   endif
 
 
