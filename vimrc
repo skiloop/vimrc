@@ -144,9 +144,9 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
   " move around tabs. conflict with the original screen top/bottom
   " comment them out if you want the original H/L
   " go to prev tab 
-  " map <S-H> gT
+  map <S-J> gT
   " go to next tab
-  " map <S-L> gt
+  map <S-K> gt
   map <C-Tab> gt
 
   " new tab
