@@ -287,8 +287,8 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
       set <F2>=OQ
       set <F3>=OR
       set <F4>=OS
-      set <Home>=OH
-      set <End>=OF
+"      set <Home>=OH
+"      set <End>=OF
     endif
     if $TERM =~ 'screen'
       set <F1>=OP
