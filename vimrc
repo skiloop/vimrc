@@ -307,16 +307,26 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
   let g:CommandTMaxHeight = 15
   if(has("gui_running")) 
     if(has("win32")) " win32 gvim
-      map <A-t> :CommandT<CR>
+      map <A-t> :CommandTFlush<CR>\|:CommandT<CR>
     elseif(has("mac")) "mac gvim
-      map <D-t> :CommandT<CR>
+      map <D-t> :CommandTFlush<CR>\|:CommandT<CR>
     else " linux gvim
-      map ô :CommandT<CR>
+      map ô :CommandTFlush<CR>\|:CommandT<CR>
     endif
   endif
   if(!has("gui_running")) 
-      map t :CommandT<CR>
+      map t :CommandTFlush<CR>\|:CommandT<CR>
   endif
+  " double percentage sign in command mode is expanded
+  " to directory of current file - http://vimcasts.org/e/14
+  cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+  map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+  map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+  " switch between files
+  nnoremap <leader><leader> <c-^>
+
   " --- taglist
   nmap <silent><F8> :TlistToggle<CR>
   imap <silent><F8> <C-o>:TlistToggle<CR>
