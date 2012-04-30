@@ -350,3 +350,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
   endif
   if(has("gui_macvim") && !has("gui_running")) " macvim console
   endif
+  
+  " --- Gitv.vim
+  let g:Gitv_OpenHorizontal = 1
