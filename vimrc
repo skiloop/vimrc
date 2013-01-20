@@ -339,7 +339,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
   let g:tagbar_autofocus = 1
 
   " --- nerdtree
-  nnoremap <silent> <F1> :NERDTreeToggle<CR>
+  nnoremap <silent><F1> :NERDTreeToggle<CR>
 
   " --- Zoom.vim
 
@@ -351,5 +351,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
   if(has("gui_macvim") && !has("gui_running")) " macvim console
   endif
   
-  " --- Gitv.vim
-  let g:Gitv_OpenHorizontal = 1
+  " --- SingleCompile
+  nmap <F9> :SCCompile<cr> 
+  nmap <F10> :SCCompileRun<cr>
