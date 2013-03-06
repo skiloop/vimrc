@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/private/var/www/redmine/log'
-let g:netrw_dirhist_2='/Users/cat/projects/lol-model-format/lib/lol_model_format'
