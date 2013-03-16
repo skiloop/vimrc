@@ -69,12 +69,12 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
+		
 " TAB setting{
-set expandtab        "replace <TAB> with spaces
-set softtabstop=2
-set shiftwidth=2
-
+"set expandtab        "replace <TAB> with spaces
+set softtabstop=4
+set shiftwidth=4
+  
 au FileType Makefile set noexpandtab
 "}      							
 
