@@ -284,15 +284,16 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 		set t_k2=[11~
 		set t_k3=[11~
 		set t_k4=[11~
-		imap OA <ESC>ki
-		imap OB <ESC>ji
-		imap OC <ESC>li
-		imap OD <ESC>hi
+		"imap OA <ESC>ki
+		"imap OB <ESC>ji
+		"imap OC <ESC>li
+		"imap OD <ESC>hi
 
 		nmap OA k
 		nmap OB j
 		nmap OC l
 		nmap OD h
+
 		if $TERM =~ 'xterm'
 			set <F1>=OP
 			set <F2>=OQ
@@ -308,7 +309,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 			set <F4>=OS
 		endif
 	endif
-
 
 	" --- SuperTab
 	"let g:SuperTabDefaultCompletionType = "context"
@@ -372,4 +372,8 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 	map <leader>h :call SearchDash()<CR>
 
 	" --- vim-turbux
+	let g:no_turbux_mappings = 1
+	map <leader>t <Plug>SendTestToTmux
+	map <leader>r <Plug>SendFocusedTestToTmux
 	let g:turbux_command_rspec  = 'zeus rspec'        " default: rspec
+
