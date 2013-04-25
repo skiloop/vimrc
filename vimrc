@@ -215,6 +215,9 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 	" Ctrl-[ jump out of the tag stack (undo Ctrl-])
 	map <C-[> <ESC>:po<CR>
 
+  " switch between file
+  nnoremap <leader><leader> <c-^>
+
 	" ,g generates the header guard
 	map <leader>g :call IncludeGuard()<CR>
 	fun! IncludeGuard()
@@ -357,3 +360,16 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 				\ "app/models/fields_data/*.rb": {"command": "fields"},
 				\ "app/models/reports/*.rb": {"command": "reports"}
 				\ }
+
+	function! SearchDash()
+		let s:browser = "/usr/bin/open"
+		let s:wordUnderCursor = expand("<cword>")
+		let s:url = "dash://".s:wordUnderCursor
+		let s:cmd ="silent ! " . s:browser . " " . s:url
+		execute s:cmd
+		redraw!
+	endfunction
+	map <leader>h :call SearchDash()<CR>
+
+	" --- vim-turbux
+	let g:turbux_command_rspec  = 'zeus rspec'        " default: rspec
