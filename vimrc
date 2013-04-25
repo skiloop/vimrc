@@ -311,30 +311,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 	"let g:SuperTabDefaultCompletionType = "context"
 	"let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
-	" --- Command-T
-	let g:CommandTMaxHeight = 15
-	if(has("gui_running")) 
-		if(has("win32")) " win32 gvim
-			map <A-t> :CommandTFlush<CR>\|:CommandT<CR>
-		elseif(has("mac")) "mac gvim
-			map <D-t> :CommandTFlush<CR>\|:CommandT<CR>
-		else " linux gvim
-			map ô :CommandTFlush<CR>\|:CommandT<CR>
-		endif
-	endif
-	if(!has("gui_running")) 
-		map t :CommandTFlush<CR>\|:CommandT<CR>
-	endif
-	" double percentage sign in command mode is expanded
-	" to directory of current file - http://vimcasts.org/e/14
-	cnoremap %% <C-R>=expand('%:h').'/'<cr>
-
-	"map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-	"map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
-
-	" switch between files
-	nnoremap <leader><leader> <c-^>
-
 	" --- ctrlp
 	map <leader>f :CtrlP<CR>
 
@@ -381,4 +357,3 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 				\ "app/models/fields_data/*.rb": {"command": "fields"},
 				\ "app/models/reports/*.rb": {"command": "reports"}
 				\ }
-
