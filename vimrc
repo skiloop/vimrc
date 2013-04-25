@@ -293,6 +293,9 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 		nmap OB j
 		nmap OC l
 		nmap OD h
+		
+		set <Home>=[H
+		set <End>=[F
 
 		if $TERM =~ 'xterm'
 			set <F1>=OP
