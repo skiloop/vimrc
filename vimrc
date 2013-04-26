@@ -212,9 +212,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     " PROGRAMMING SHORTCUTS
     "--------------------------------------------------------------------------- 
 
-    " Ctrl-[ jump out of the tag stack (undo Ctrl-])
-    map <C-[> <ESC>:po<CR>
-
     " switch between file
     nnoremap <leader><leader> <c-^>
 
@@ -278,42 +275,42 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
     " --- AutoClose - Inserts matching bracket, paren, brace or quote 
     " fixed the arrow key problems caused by AutoClose
-    if !has("gui_running")	
-        set term=linux
-        set t_k1=[11~
-        set t_k2=[11~
-        set t_k3=[11~
-        set t_k4=[11~
-        "imap OA <ESC>ki
-        "imap OB <ESC>ji
-        "imap OC <ESC>li
-        "imap OD <ESC>hi
+    "IF !HAS("GUI_RUNNING")	
+        "set term=linux
+        "set t_k1=[11~
+        "set t_k2=[11~
+        "set t_k3=[11~
+        "set t_k4=[11~
+        ""imap oa <esc>ki
+        ""imap ob <esc>ji
+        ""imap oc <esc>li
+        ""imap od <esc>hi
 
-        nmap OA k
-        nmap OB j
-        nmap OC l
-        nmap OD h
+        "nmap oa k
+        "nmap ob j
+        "nmap oc l
+        "nmap od h
 
-        set <Home>=[H
-        set <End>=[F
+        "set <home>=[h
+        "set <end>=[f
 
-        if $TERM =~ 'xterm'
-            set <F1>=OP
-            set <F2>=OQ
-            set <F3>=OR
-            set <F4>=OS
-            set <Home>=OH
-            set <End>=OF
-        endif
-        if $TERM =~ 'screen'
-            set <F1>=OP
-            set <F2>=OQ
-            set <F3>=OR
-            set <F4>=OS
-        endif
-    endif
+        "if $term =~ 'xterm'
+            "set <f1>=op
+            "set <f2>=oq
+            "set <f3>=or
+            "set <f4>=os
+            "set <home>=oh
+            "set <end>=of
+        "endif
+        "if $term =~ 'screen'
+            "set <f1>=op
+            "set <f2>=oq
+            "set <f3>=or
+            "set <f4>=os
+        "endif
+    "endif
 
-    " --- SuperTab
+    " --- supertab
     "let g:SuperTabDefaultCompletionType = "context"
     "let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
@@ -323,13 +320,13 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     let g:ctrlp_regexp = 1
     let g:ctrlp_match_window_reversed = 0
     let g:ctrlp_prompt_mappings = { 'PrtAdd(".*")': ['<space>'] }
-    let g:ctrlp_user_command = {
-                \ 'types': {
-                \ 1: ['.git', 'cd %s && git ls-files -c -o'],
-                \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-                \ },
-                \ 'fallback': 'find %s -type f'
-                \ }
+    "let g:ctrlp_user_command = {
+                "\ 'types': {
+                "\ 1: ['.git', 'cd %s && git ls-files -c -o'],
+                "\ 2: ['.hg', 'hg --cwd %s locate -I .'],
+                "\ },
+                "\ 'fallback': 'find %s -type f'
+                "\ }
 
     " --- taglist
     nmap <silent><F8> :TlistToggle<CR>
