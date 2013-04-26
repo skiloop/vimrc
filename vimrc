@@ -152,9 +152,9 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     " move around tabs. conflict with the original screen top/bottom
     " comment them out if you want the original H/L
     " go to prev tab 
-    map <S-J> gT
+    map <S-H> gT
     " go to next tab
-    map <S-K> gt
+    map <S-L> gt
     map <C-Tab> gt
 
     " new tab
@@ -388,3 +388,5 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     map <leader>r <Plug>SendFocusedTestToTmux
     let g:turbux_command_rspec  = 'zeus rspec'        " default: rspec
 
+    " --- vim-multiple-cursors
+    let g:multi_cursor_exit_from_insert_mode = 0
