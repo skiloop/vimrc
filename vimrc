@@ -394,4 +394,4 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     " --- align.vim
 
     " For Ruby hash
-    command! -range AlignHash execute "<line1>,<line2>Align! Wlp1P0 :" | execute "<line1>,<line2>Align! p1P1 =>"
+    command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
