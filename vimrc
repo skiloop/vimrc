@@ -390,3 +390,8 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
     " --- vim-multiple-cursors
     let g:multi_cursor_exit_from_insert_mode = 0
+
+    " --- align.vim
+
+    " For Ruby hash
+    command! -range AlignHash execute "<line1>,<line2>Align! Wlp1P0 :" | execute "<line1>,<line2>Align! p1P1 =>"
