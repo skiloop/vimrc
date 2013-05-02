@@ -79,29 +79,21 @@ PLUGINS
 
 * [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332): Pathogen let us install a plugin as a bundle in ~/.vim/bundle seprately.
 
+* [matchit](http://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages. 
+
 * [Nerd Tree](http://www.vim.org/scripts/script.php?script_id=1658): A tree explorer plugin for navigating the filesystem.
 
   Useful commands:
   * `:Bookmark [name]` - bookmark any directory as name
   * `:NERDTree [name]` - open the bookmark [name] in Nerd Tree
 
-* [AutoClose](http://www.vim.org/scripts/script.php?script_id=1849):  Inserts matching bracket, paren, brace or quote.
-
 * [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt): deal with pairs of surroundings.
 
-* [matchit](http://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages. 
-
-* [Command-T](https://github.com/wincent/Command-T): open and navigate between files with `cmd-t`.
-  
 * [SuperTab](http://www.vim.org/scripts/script.php?script_id=1643): Do all your insert-mode completion with Tab.
 
 * [snipMate](http://www.vim.org/scripts/script.php?script_id=2540): TextMate-style snippets for Vim
 
   `:help snipMate` to see more info.
-
-* [YankRing](http://www.vim.org/scripts/script.php?script_id=1234): Maintains a history of previous yanks, changes and deletes 
-  
-  `:help yankring` to see more info.
 
 * [VisIncr](http://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
   
@@ -110,6 +102,28 @@ PLUGINS
 * [taglist](https://github.com/vim-scripts/taglist.vim): taglist, list functions, structures.
 
 * [tagbar](http://majutsushi.github.com/tagbar/): tagbar, Vim plugin that displays tags in a window, ordered by class etc.
+
+* [multiple-cursors](https://github.com/terryma/vim-multiple-cursors): Ctrl + n to multiple select, v to enter visual mode, i to enter insert mode.
+
+* [fugtive](https://github.com/terryma/vim-multiple-cursors): Gblame to view git blame.
+
+* [startify](https://github.com/mhinz/vim-startify): Start page replacement, shows recent files.
+
+* [Turbux](https://github.com/jgdavey/vim-turbux): Run ruby tests in tmux window. <leader>r to run current line or last test, <leader>t to run whole test file.
+
+* [Ag](https://github.com/epmatsw/ag.vim), [Ack](https://github.com/mileszs/ack.vi): Better than grep.
+
+* [Align](https://github.com/vim-scripts/Align): Alignment tool. Add `AlignHash` for Ruby Hashes.
+
+* [CtrlP](https://github.com/kien/ctrlp.vim): Fuzzy finder. <leader>f to search. Ctrl + x (sp), Ctrl + v (vsp), Ctrl + t (tab)
+
+* [vim-rails](https://github.com/tpope/vim-rails): `A` for alternate file, `R` for related file, `gf` fo partials, fixtures, etc.
+
+* [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Show git diff in gutter.
+
+* [SingleCompile](https://github.com/xuhdev/SingleCompile): <F10> to compile current file.
+
+* [NerdCommenter](https://github.com/scrooloose/nerdcommenter): <leader>cc to comment, <leader>cu to uncomment. <leader>c<space> to toggle.
 
 Language specific supports
 --------------------------
