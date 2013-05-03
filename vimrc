@@ -116,6 +116,11 @@ autocmd FileType ruby,eruby,yaml set softtabstop=2 shiftwidth=2 tabstop=2
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
+" Alias Q, W to q, w. ref: http://usevim.com/2013/05/01/not-an-editor-command/
+command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
+
+command! -bang Q quit<bang>
+
     "--------------------------------------------------------------------------- 
     " Tip #382: Search for <cword> and replace with input() in all open buffers 
     "--------------------------------------------------------------------------- 
@@ -170,7 +175,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     endif
 
     " ,/ turn off search highlighting
-    nmap <leader>/ :nohl<CR>
+    nmap <leader>/ :set hlsearch! hlsearch?<CR>
 
     " Bash like keys for the command line
     cnoremap <C-A>      <Home>
