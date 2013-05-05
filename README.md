@@ -31,19 +31,7 @@ HOW TO INSTALL
 
             > install-win32.bat
 
-3. (Optional, if you want Command-T) Compile the Command-T plugin
-
-  * Mac Os/Linux:
-
-            $ cd .vim/bundle/command-t/ruby/command-t
-            $ ruby extconf.rb
-            $ make
-
- * Windows:
-
-            see: http://blog.hsatac.net/?p=414
-
-4. (Optional, if you want taglist) Install the Exuberant Ctags (http://ctags.sourceforge.net/)
+3. (Optional, if you want taglist) Install the Exuberant Ctags (http://ctags.sourceforge.net/)
 
  * Mac Os: The built-in ctags is not compitable with taglist.vim
 
