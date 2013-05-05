@@ -69,13 +69,18 @@ PLUGINS
 
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages. 
 
-* [Nerd Tree](http://www.vim.org/scripts/script.php?script_id=1658): A tree explorer plugin for navigating the filesystem.
+* [Nerd Tree](http://www.vim.org/scripts/script.php?script_id=1658): A tree explorer plugin for navigating the filesystem. `<F5>` to toggle
 
   Useful commands:
   * `:Bookmark [name]` - bookmark any directory as name
   * `:NERDTree [name]` - open the bookmark [name] in Nerd Tree
 
 * [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt): deal with pairs of surroundings.
+  
+  * `ysiw` (you surround in word)
+  * `cs` (change surround)
+  * `ds` (delete surround)
+  * `S` (surrond in visual mode)
 
 * [SuperTab](http://www.vim.org/scripts/script.php?script_id=1643): Do all your insert-mode completion with Tab.
 
@@ -85,39 +90,33 @@ PLUGINS
 
 * [VisIncr](http://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
   
-* [Zoom](https://github.com/vim-scripts/zoom.vim): Use +, -, 0 keys to zoom in/out like firefox or macvim.
+* [Zoom](https://github.com/vim-scripts/zoom.vim): Use `+`, `-`, `0` keys to zoom in/out like firefox or macvim.
 
-* [taglist](https://github.com/vim-scripts/taglist.vim): taglist, list functions, structures.
+* [taglist](https://github.com/vim-scripts/taglist.vim): taglist, list functions, structures. `<F8>` to toggle.
 
-* [tagbar](http://majutsushi.github.com/tagbar/): tagbar, Vim plugin that displays tags in a window, ordered by class etc.
+* [tagbar](http://majutsushi.github.com/tagbar/): tagbar, Vim plugin that displays tags in a window, ordered by class etc. `<F7>` toggle.
 
-* [multiple-cursors](https://github.com/terryma/vim-multiple-cursors): Ctrl + n to multiple select, v to enter visual mode, i to enter insert mode.
+* [multiple-cursors](https://github.com/terryma/vim-multiple-cursors): `Ctrl + n` to multiple select, `v` to enter visual mode, `i` to enter insert mode.
 
-* [fugtive](https://github.com/terryma/vim-multiple-cursors): Gblame to view git blame.
+* [fugtive](https://github.com/terryma/vim-multiple-cursors): `:Gblame` to view git blame.
 
 * [startify](https://github.com/mhinz/vim-startify): Start page replacement, shows recent files.
 
-* [Turbux](https://github.com/jgdavey/vim-turbux): Run ruby tests in tmux window. <leader>r to run current line or last test, <leader>t to run whole test file.
+* [Turbux](https://github.com/jgdavey/vim-turbux): Run ruby tests in tmux window. `<leader>r` to run current line or last test, `<leader>t` to run whole test file.
 
 * [Ag](https://github.com/epmatsw/ag.vim), [Ack](https://github.com/mileszs/ack.vi): Better than grep.
 
-* [Align](https://github.com/vim-scripts/Align): Alignment tool. Add `AlignHash` for Ruby Hashes.
+* [Align](https://github.com/vim-scripts/Align): Alignment tool. Add `:AlignHash` for Ruby Hashes.
 
-* [CtrlP](https://github.com/kien/ctrlp.vim): Fuzzy finder. <leader>f to search. Ctrl + x (sp), Ctrl + v (vsp), Ctrl + t (tab)
+* [CtrlP](https://github.com/kien/ctrlp.vim): Fuzzy finder. `<leader>f` to search. `Ctrl + x` (sp), `Ctrl + v` (vsp), `Ctrl + t` (tab)
 
 * [vim-rails](https://github.com/tpope/vim-rails): `A` for alternate file, `R` for related file, `gf` fo partials, fixtures, etc.
 
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Show git diff in gutter.
 
-* [SingleCompile](https://github.com/xuhdev/SingleCompile): <F10> to compile current file.
+* [SingleCompile](https://github.com/xuhdev/SingleCompile): `<F10>` to compile current file.
 
-* [NerdCommenter](https://github.com/scrooloose/nerdcommenter): <leader>cc to comment, <leader>cu to uncomment. <leader>c<space> to toggle.
-
-Language specific supports
---------------------------
-
-* Restructured Text: `ctrl-u 1~5` inserts Part/Chapter/Section headers
-* Javascript, Python, CSS, C, PHP, Ruby: use `TAB` to do omni-completion.
+* [NerdCommenter](https://github.com/scrooloose/nerdcommenter): `<leader>cc` to comment, `<leader>cu` to uncomment. `<leader>c<space>` to toggle.
 
 Other good references
 ---------------------
