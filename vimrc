@@ -345,7 +345,7 @@ command! -bang Q quit<bang>
     let g:tagbar_autofocus = 1
 
     " --- nerdtree
-    nnoremap <silent><F1> :NERDTreeToggle<CR>
+    nnoremap <silent><F5> :NERDTreeToggle<CR>
 
     " --- Zoom.vim
 
