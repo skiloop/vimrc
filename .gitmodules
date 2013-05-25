@@ -2,10 +2,6 @@
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
 	ignore = untracked
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
-	ignore = untracked
 [submodule "bundle/VisIncr"]
 	path = bundle/VisIncr
 	url = https://github.com/vim-scripts/VisIncr.git
@@ -101,3 +97,20 @@
 [submodule "bundle/vim-coffee"]
 	path = bundle/vim-coffee
 	url = https://github.com/kchmck/vim-coffee-script.git
+	ignore = untracked
+[submodule "bundle/tlib_vim"]
+	path = bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+	ignore = untracked
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+	ignore = untracked
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+	ignore = untracked
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+	ignore = untracked
