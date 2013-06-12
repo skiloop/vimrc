@@ -114,3 +114,11 @@
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
 	ignore = untracked
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = https://github.com/mattn/zencoding-vim.git
+	ignore = untracked
+[submodule "bundle/thumbnail.vim"]
+	path = bundle/thumbnail.vim
+	url = https://github.com/itchyny/thumbnail.vim.git
+	ignore = untracked
