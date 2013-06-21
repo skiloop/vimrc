@@ -126,3 +126,7 @@
 	path = bundle/switch.vim
 	url = https://github.com/AndrewRadev/switch.vim.git
 	ignore = untracked
+[submodule "bundle/rspec-vim"]
+	path = bundle/rspec-vim
+	url = git@github.com:hSATAC/rspec.vim.git
+	ignore = untracked
