@@ -347,15 +347,8 @@ command! -bang Q quit<bang>
     " --- nerdtree
     nnoremap <silent><F5> :NERDTreeToggle<CR>
 
-    " --- Zoom.vim
-
-    if(has("gui_running") && has("win32")) " gvim win 32
-        map <C-kPlus> :ZoomIn<CR>
-        map <C-kMinus> :ZoomOut<CR>
-        map <C-k0> :ZoomReset<CR>
-    endif
-    if(has("gui_macvim") && !has("gui_running")) " macvim console
-    endif
+    " --- Switch.vim
+    nnoremap - :Switch<cr>
 
     " --- SingleCompile
     nmap <F9> :SCCompile<cr> 

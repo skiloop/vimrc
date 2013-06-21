@@ -26,10 +26,6 @@
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
 	ignore = untracked
-[submodule "bundle/zoom"]
-	path = bundle/zoom
-	url = https://github.com/vim-scripts/zoom.vim.git
-	ignore = untracked
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
@@ -125,4 +121,8 @@
 [submodule "bundle/vim-ruby-refactoring"]
 	path = bundle/vim-ruby-refactoring
 	url = https://github.com/ecomba/vim-ruby-refactoring.git
+	ignore = untracked
+[submodule "bundle/switch.vim"]
+	path = bundle/switch.vim
+	url = https://github.com/AndrewRadev/switch.vim.git
 	ignore = untracked
