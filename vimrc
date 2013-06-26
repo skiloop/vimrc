@@ -20,6 +20,7 @@ set nu              " display line number
 set ts=4            " tabstop 4
 set wak=no          " disable GUI alt menu
 set noswapfile
+set list listchars=tab:»·,trail:·
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
@@ -39,13 +40,14 @@ if has("gui_running")	" GUI color and font settings
     else
         set guifont=Bitstream_Vera_Sans_Mono:h13
     endif
-    set background=dark 
     set t_Co=256          " 256 color mode
     set cursorline        " highlight current line
     colors railscasts
+    set background=dark 
 else
     " terminal color settings
-    colors vgod
+    colors wombat256
+    set background=light
 endif
 
 set clipboard=unnamed	" yank to the system register (*) by default
