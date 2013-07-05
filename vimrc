@@ -9,6 +9,16 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"--------------------------------------------------------------------------- 
+" ENCODING SETTINGS
+"--------------------------------------------------------------------------- 
+
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+set fileencoding=utf-8
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
 " General Settings
 
 set nocompatible	" not compatible with the old-fashion vi mode
@@ -118,10 +128,10 @@ autocmd FileType ruby,eruby,yaml set softtabstop=2 shiftwidth=2 tabstop=2
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-" Alias Q, W to q, w. ref: http://usevim.com/2013/05/01/not-an-editor-command/
-command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
+    " Alias Q, W to q, w. ref: http://usevim.com/2013/05/01/not-an-editor-command/
+    command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 
-command! -bang Q quit<bang>
+    command! -bang Q quit<bang>
 
     "--------------------------------------------------------------------------- 
     " Tip #382: Search for <cword> and replace with input() in all open buffers 
@@ -261,60 +271,44 @@ command! -bang Q quit<bang>
     autocmd BufNewFile,BufRead *.sass             set ft=sass.css
 
     "--------------------------------------------------------------------------- 
-    " ENCODING SETTINGS
-    "--------------------------------------------------------------------------- 
-
-    set encoding=utf-8
-    set fileencodings=utf-8,chinese,latin-1
-    "if has("win32")
-    "    set fileencoding=chinese
-    "else
-    "    set fileencoding=utf-8
-    "endif
-    set fileencoding=utf-8
-    source $VIMRUNTIME/delmenu.vim
-    source $VIMRUNTIME/menu.vim
-    "language messages zh_TW.utf-8
-
-    "--------------------------------------------------------------------------- 
     " PLUGIN SETTINGS
     "--------------------------------------------------------------------------- 
 
     " --- AutoClose - Inserts matching bracket, paren, brace or quote 
     " fixed the arrow key problems caused by AutoClose
     "IF !HAS("GUI_RUNNING")	
-        "set term=linux
-        "set t_k1=[11~
-        "set t_k2=[11~
-        "set t_k3=[11~
-        "set t_k4=[11~
-        ""imap oa <esc>ki
-        ""imap ob <esc>ji
-        ""imap oc <esc>li
-        ""imap od <esc>hi
+    "set term=linux
+    "set t_k1=[11~
+    "set t_k2=[11~
+    "set t_k3=[11~
+    "set t_k4=[11~
+    ""imap oa <esc>ki
+    ""imap ob <esc>ji
+    ""imap oc <esc>li
+    ""imap od <esc>hi
 
-        "nmap oa k
-        "nmap ob j
-        "nmap oc l
-        "nmap od h
+    "nmap oa k
+    "nmap ob j
+    "nmap oc l
+    "nmap od h
 
-        "set <home>=[h
-        "set <end>=[f
+    "set <home>=[h
+    "set <end>=[f
 
-        "if $term =~ 'xterm'
-            "set <f1>=op
-            "set <f2>=oq
-            "set <f3>=or
-            "set <f4>=os
-            "set <home>=oh
-            "set <end>=of
-        "endif
-        "if $term =~ 'screen'
-            "set <f1>=op
-            "set <f2>=oq
-            "set <f3>=or
-            "set <f4>=os
-        "endif
+    "if $term =~ 'xterm'
+    "set <f1>=op
+    "set <f2>=oq
+    "set <f3>=or
+    "set <f4>=os
+    "set <home>=oh
+    "set <end>=of
+    "endif
+    "if $term =~ 'screen'
+    "set <f1>=op
+    "set <f2>=oq
+    "set <f3>=or
+    "set <f4>=os
+    "endif
     "endif
 
     " --- supertab
@@ -328,12 +322,12 @@ command! -bang Q quit<bang>
     let g:ctrlp_match_window_reversed = 0
     let g:ctrlp_prompt_mappings = { 'PrtAdd(".*")': ['<space>'] }
     "let g:ctrlp_user_command = {
-                "\ 'types': {
-                "\ 1: ['.git', 'cd %s && git ls-files -c -o'],
-                "\ 2: ['.hg', 'hg --cwd %s locate -I .'],
-                "\ },
-                "\ 'fallback': 'find %s -type f'
-                "\ }
+    "\ 'types': {
+    "\ 1: ['.git', 'cd %s && git ls-files -c -o'],
+    "\ 2: ['.hg', 'hg --cwd %s locate -I .'],
+    "\ },
+    "\ 'fallback': 'find %s -type f'
+    "\ }
 
     " --- taglist
     nmap <silent><F8> :TlistToggle<CR>
@@ -404,3 +398,14 @@ command! -bang Q quit<bang>
     let g:indent_guides_auto_colors = 0
     autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=235
     autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+
+    " --- vim-airline
+    set ttimeoutlen=50
+    let g:airline_left_sep = ''
+    let g:airline_left_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_linecolumn_prefix = ''
+    let g:airline_linecolumn_prefix = ''
+    let g:airline_linecolumn_prefix = ''
+    let g:airline_fugitive_prefix = ''
