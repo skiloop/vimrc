@@ -343,6 +343,9 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     " --- nerdtree
     nnoremap <silent><F5> :NERDTreeToggle<CR>
 
+    " --- copy to osx clipboard
+    map <F6> :w !pbcopy<CR><CR>
+
     " --- Switch.vim
     nnoremap - :Switch<cr>
 
