@@ -343,6 +343,9 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     " --- nerdtree
     nnoremap <silent><F5> :NERDTreeToggle<CR>
 
+    " --- gitgutter
+    highlight clear SignColumn
+
     " --- copy to osx clipboard
     map <F6> :w !pbcopy<CR><CR>
 
@@ -412,3 +415,4 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     let g:airline_linecolumn_prefix = ''
     let g:airline_linecolumn_prefix = ''
     let g:airline_fugitive_prefix = ''
+    let g:airline_theme = 'solarized'
