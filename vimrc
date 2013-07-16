@@ -222,9 +222,20 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     inoremap <C-u>5 <esc>yypVr^A
     "}
 
-
-
-
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " RENAME CURRENT FILE
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    function! RenameFile()
+        let old_name = expand('%')
+        let new_name = input('New file name: ', expand('%'), 'file')
+        if new_name != '' && new_name != old_name
+            exec ':saveas ' . new_name
+            exec ':silent !rm ' . old_name
+            redraw!
+        endif
+    endfunction
+    map <leader>n :call RenameFile()<cr>
+ 
     "--------------------------------------------------------------------------- 
     " PROGRAMMING SHORTCUTS
     "--------------------------------------------------------------------------- 
@@ -359,19 +370,52 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     " --- VimRails
 
     let g:rails_projections = {
-                \ "app/presenters/*.rb": { "command": "presenters" },
-                \ "spec/factories/*.rb": {"command": "factories"},
-                \ "spec/factories/fields/*.rb": {"command": "factories"},
-                \ "spec/features/*.rb": {"command": "features"},
-                \ "spec/support/*.rb": {"command": "supports"},
-                \ "app/extras/form_object/*.rb": {"command": "forms"},
-                \ "app/extras/service/*.rb": {"command": ["services", "forms", "models"]},
-                \ "app/extras/view_object/*.rb": {"command": "views"},
-                \ "app/models/fields/*.rb": {"command": "fields"},
-                \ "app/models/fields_data/*.rb": {"command": "fields"},
-                \ "app/models/reports/*.rb": {"command": "reports"}
-                \ }
+          \ "app/presenters/*.rb": { "command": "presenters" },
+          \ "app/observers/*.rb": { "command": "observers" },
+          \ "app/services/*.rb": { "command": "services" },
+          \ "app/extras/form_object/*.rb": {"command": "forms"},
+          \ "app/forms/*.rb": {"command": "forms"},
+          \ "app/extras/service/*.rb": {"command": ["services", "forms", "models"]},
+          \ "app/extras/view_object/*.rb": {"command": "views"},
+          \ "app/models/fields/*.rb": {"command": "fields"},
+          \ "app/models/fields_data/*.rb": {"command": "fields"},
+          \ "app/models/concerns/*.rb": {"command": ["models", "cerns"]},
+          \ "app/models/reports/*.rb": {"command": "reports"},
+          \ "spec/factories/*.rb": {"command": "factories"},
+          \ "spec/factories/fields/*.rb": {"command": "factories"},
+          \ "spec/features/*.rb": {"command": "features"},
+          \ "spec/support/*.rb": {"command": "supports"},
+          \ "lib/tasks/*.rake": {"alternate": ["spec/lib/tasks/%s.rake_spec.rb"]},
+          \ "app/assets/javascripts/*.js.coffee": {"alternate": ["spec/javascripts/%s_spec.js.coffee"]},
+          \ "spec/javascripts/*_spec.js.coffee": {"alternate": ["app/assets/javascripts/%s.js.coffee"]}
+          \ }
 
+    " Open/Create related spec/file
+    function! s:CreateRelated()
+      let related = s:GetRelatedFile(expand('%'))
+      call s:Open(related)
+    endfunction
+
+    " Return the related filename
+    function! s:GetRelatedFile(file)
+        if match(a:file, '_spec\.rb$') != -1
+            return substitute(substitute(a:file, "_spec.rb$", ".rb", ""), '^spec/', 'app/', '')
+        else
+            return substitute(substitute(a:file, ".rb$", "_spec.rb", ""), '^app/', 'spec/', '')
+        endif
+    endfunction
+
+    " Open the related file in a vsplit
+    function! s:Open(file)
+        exec('split ' . a:file)
+    endfunction
+
+    " Register a new command `AC` for open/create a
+    " related file
+    command! AC :call <SID>CreateRelated()
+
+    " --- dash.vim
+     
     function! SearchDash()
         let s:browser = "/usr/bin/open"
         let s:wordUnderCursor = expand("<cword>")
