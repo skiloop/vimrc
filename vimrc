@@ -460,3 +460,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     let g:airline_linecolumn_prefix = ''
     let g:airline_fugitive_prefix = ''
     let g:airline_theme = 'solarized'
+
+    " --- easymotion
+    hi EasyMotionTarget ctermbg=none ctermfg=green
+    hi EasyMotionShade  ctermbg=none ctermfg=blue
