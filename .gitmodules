@@ -138,3 +138,6 @@
 	path = bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
 	ignore = untracked
+[submodule "bundle/xterm-color-table"]
+	path = bundle/xterm-color-table
+	url = https://github.com/guns/xterm-color-table.vim.git
