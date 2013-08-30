@@ -126,7 +126,11 @@ autocmd FileType ruby,eruby,yaml set softtabstop=2 shiftwidth=2 tabstop=2
 
 " Go
 au FileType go au BufWritePre <buffer> Fmt
-au FileType go set ts=2 " Set tabs to 2 spaces
+"au FileType go
+    "\ set ts=2 | " Set tabs to 2 spaces
+    "\ set noexpandtab
+    "\ set shiftwidth=2
+    "\ set softtabstop=2
 
 "Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
