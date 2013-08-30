@@ -159,7 +159,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     let g:mapleader=","
 
     "replace the current word in all opened buffers
-    map <leader>r :call Replace()<CR>
+    "map <leader>r :call Replace()<CR>
 
     " --- move around splits {
     " move to and maximize the below split 
