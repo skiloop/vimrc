@@ -493,8 +493,13 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     let g:airline_linecolumn_prefix = ''
     let g:airline_linecolumn_prefix = ''
     let g:airline_linecolumn_prefix = ''
-    let g:airline_fugitive_prefix = ''
     let g:airline#extensions#whitespace#enabled = 0
+    let g:airline#extensions#branch#enabled = 1
+    let g:airline#extensions#syntastic#enabled = 0
+    let g:airline#extensions#tagbar#enabled = 1
+    let g:airline#extensions#csv#enabled = 0
+    let g:airline#extensions#hunks#enabled = 0
+    let g:airline#extensions#virtualenv#enabled = 1
 
     let g:airline_theme_patch_func = 'AirlineThemePatch'
     function! AirlineThemePatch(palette)
