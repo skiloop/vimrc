@@ -483,6 +483,8 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     let g:indent_guides_auto_colors = 0
     autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=235
     autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+    "test
+    "testest
 
     " --- vim-airline
     set ttimeoutlen=50
@@ -494,7 +496,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     let g:airline_linecolumn_prefix = ''
     let g:airline_linecolumn_prefix = ''
     let g:airline_fugitive_prefix = ''
-    let g:airline_theme = 'solarized'
+    let g:airline#extensions#whitespace#enabled = 0
 
     " --- easymotion
     hi EasyMotionTarget ctermbg=none ctermfg=green
