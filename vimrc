@@ -30,7 +30,7 @@ set nu              " display line number
 set ts=4            " tabstop 4
 set wak=no          " disable GUI alt menu
 set noswapfile
-set list listchars=tab:»·,trail:·
+"set list listchars=tab:»·,trail:·
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
@@ -123,6 +123,10 @@ autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,
 
 " Ruby
 autocmd FileType ruby,eruby,yaml set softtabstop=2 shiftwidth=2 tabstop=2
+
+" Go
+au FileType go au BufWritePre <buffer> Fmt
+au FileType go set ts=2 " Set tabs to 2 spaces
 
 "Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
@@ -350,6 +354,34 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     " --- tagbar
     nnoremap <silent><F7> :TagbarToggle<CR>
     let g:tagbar_autofocus = 1
+    
+    let g:tagbar_type_go = {
+        \ 'ctagstype' : 'go',
+        \ 'kinds'     : [
+            \ 'p:package',
+            \ 'i:imports:1',
+            \ 'c:constants',
+            \ 'v:variables',
+            \ 't:types',
+            \ 'n:interfaces',
+            \ 'w:fields',
+            \ 'e:embedded',
+            \ 'm:methods',
+            \ 'r:constructor',
+            \ 'f:functions'
+        \ ],
+        \ 'sro' : '.',
+        \ 'kind2scope' : {
+            \ 't' : 'ctype',
+            \ 'n' : 'ntype'
+        \ },
+        \ 'scope2kind' : {
+            \ 'ctype' : 't',
+            \ 'ntype' : 'n'
+        \ },
+        \ 'ctagsbin'  : 'gotags',
+        \ 'ctagsargs' : '-sort -silent'
+    \ }
 
     " --- nerdtree
     nnoremap <silent><F5> :NERDTreeToggle<CR>
