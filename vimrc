@@ -460,17 +460,20 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
     " --- vim-turbux
     let g:no_turbux_mappings = 1
-    map <leader>t <Plug>SendTestToTmux
-    map <leader>r <Plug>SendFocusedTestToTmux
-    let g:turbux_command_rspec  = 'zeus rspec'        " default: rspec
+    au Filetype ruby
+        \ map <leader>t <Plug>SendTestToTmux |
+        \ map <leader>r <Plug>SendFocusedTestToTmux |
+        \ let g:turbux_command_rspec  = 'zeus rspec'        " default: rspec
+
+    au FileType go map <leader>t :Tmux go test<CR>
 
     " --- vim-multiple-cursors
     let g:multi_cursor_exit_from_insert_mode = 0
 
     " --- align.vim
 
-    " For Ruby hash
-    command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
+        " For Ruby hash
+        command! -range AlignHash execute "<line1>,<line2>Align! P01 : =>"
 
     " --- vim-indent-guide
     let g:indent_guides_start_level = 2
