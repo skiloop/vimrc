@@ -388,7 +388,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     \ }
 
     " --- nerdtree
-    nnoremap <silent><F5> :NERDTreeToggle<CR>
+    nnoremap <silent><F5> :NERDTreeTabsToggle<CR>
 
     " --- gitgutter
     highlight clear SignColumn
