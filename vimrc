@@ -30,7 +30,7 @@ set nu              " display line number
 set ts=4            " tabstop 4
 set wak=no          " disable GUI alt menu
 set noswapfile
-"set list listchars=tab:»·,trail:·
+set list listchars=tab:»·,trail:·
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
