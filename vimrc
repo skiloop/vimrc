@@ -150,6 +150,14 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
         :unlet! s:word 
     endfun 
 
+    " Highlight trailing whitespaces
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    match ExtraWhitespace /\s\+$/
+    autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+    autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+    autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+    autocmd BufWinLeave * call clearmatches()
+
 
     "--------------------------------------------------------------------------- 
     " USEFUL SHORTCUTS
@@ -331,8 +339,8 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     "endif
 
     " --- supertab
-    let g:SuperTabDefaultCompletionType = "context"
-    "let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+    "let g:SuperTabDefaultCompletionType = "context"
+    let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
     " --- ctrlp
     map <leader>f :CtrlPMixed<CR>
@@ -388,7 +396,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     \ }
 
     " --- nerdtree
-    nnoremap <silent><F5> :NERDTreeTabsToggle<CR>
+    nnoremap <silent><F5> :NERDTreeMirrorToggle<CR>
 
     " --- gitgutter
     highlight clear SignColumn
@@ -517,3 +525,5 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
     " --- easymotion
     hi EasyMotionTarget ctermbg=none ctermfg=green
     hi EasyMotionShade  ctermbg=none ctermfg=blue
+
+
