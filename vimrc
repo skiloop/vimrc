@@ -47,7 +47,7 @@ if has("gui_running")	" GUI color and font settings
   highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 else
 " terminal color settings
-  colors vgod
+  colors  evening
 endif
 
 set clipboard=unnamed	" yank to the system register (*) by default
@@ -336,3 +336,17 @@ au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw! " recompile c
 
 " --- vim-gitgutter
 let g:gitgutter_enabled = 1
+
+" show line number
+set nu
+
+
+
+"
+" encode setting
+"
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+let &termencoding=&encoding
+
+
