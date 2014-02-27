@@ -1,36 +1,51 @@
+[submodule "bundle/vim-latex"]
+	path = bundle/vim-latex
+	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex/
+[submodule "bundle/smart-parentheses"]
+	path = bundle/smart-parentheses
+	url = https://github.com/vim-scripts/Smart-Parentheses.git
+[submodule "bundle/autoclose"]
+	path = bundle/autoclose
+	url = https://github.com/Townk/vim-autoclose.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = https://github.com/wincent/Command-T.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-<<<<<<< HEAD
 [submodule "bundle/CuteErrorMarker"]
 	path = bundle/CuteErrorMarker
 	url = https://github.com/Twinside/vim-cuteErrorMarker.git
 [submodule "bundle/yankring"]
 	path = bundle/yankring
 	url = https://github.com/vim-scripts/YankRing.vim.git
-=======
-	ignore = untracked
->>>>>>> 12317c528646f5fd58a262a9408a84cf7f0e530f
 [submodule "bundle/VisIncr"]
 	path = bundle/VisIncr
 	url = https://github.com/vim-scripts/VisIncr.git
-	ignore = untracked
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = https://github.com/sukima/xmledit.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
-	ignore = untracked
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-	ignore = untracked
+[submodule "bundle/OmniCppComplete"]
+	path = bundle/OmniCppComplete
+	url = https://github.com/vim-scripts/OmniCppComplete.git
+[submodule "bundle/javacomplete"]
+	path = bundle/javacomplete
+	url = https://github.com/vim-scripts/javacomplete
+[submodule "bundle/scala-vim-support"]
+	path = bundle/scala-vim-support
+	url = https://github.com/vgod/scala-vim-support.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-	ignore = untracked
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-<<<<<<< HEAD
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
@@ -76,137 +91,3 @@
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = git://github.com/scrooloose/snipmate-snippets.git
-=======
-	ignore = untracked
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
-	ignore = untracked
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-	url = git://github.com/majutsushi/tagbar
-	ignore = untracked
-[submodule "bundle/gist-vim"]
-	path = bundle/gist-vim
-	url = https://github.com/mattn/gist-vim
-	ignore = untracked
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
-	ignore = untracked
-[submodule "bundle/gocode"]
-	path = bundle/gocode
-	url = https://github.com/golangtw/gocode.vim.git
-	ignore = untracked
-[submodule "bundle/go.vim"]
-	path = bundle/go.vim
-	url = https://github.com/golangtw/go.vim.git
-	ignore = untracked
-[submodule "bundle/SingleCompile"]
-	path = bundle/SingleCompile
-	url = https://github.com/xuhdev/SingleCompile.git
-	ignore = untracked
-[submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-	ignore = untracked
-[submodule "bundle/vim-rails"]
-	path = bundle/vim-rails
-	url = https://github.com/tpope/vim-rails.git
-	ignore = untracked
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
-	ignore = untracked
-[submodule "bundle/align"]
-	path = bundle/align
-	url = https://github.com/vim-scripts/Align.git
-	ignore = untracked
-[submodule "bundle/ag"]
-	path = bundle/ag
-	url = https://github.com/epmatsw/ag.vim.git
-	ignore = untracked
-[submodule "bundle/tslime"]
-	path = bundle/tslime
-	url = https://github.com/jgdavey/tslime.vim.git
-	ignore = untracked
-[submodule "bundle/vim-turbux"]
-	path = bundle/vim-turbux
-	url = https://github.com/jgdavey/vim-turbux.git
-	ignore = untracked
-[submodule "bundle/startify"]
-	path = bundle/startify
-	url = https://github.com/mhinz/vim-startify.git
-	ignore = untracked
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-	ignore = untracked
-[submodule "bundle/vim-multiple-cursors"]
-	path = bundle/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
-	ignore = untracked
-[submodule "bundle/vim-coffee"]
-	path = bundle/vim-coffee
-	url = https://github.com/kchmck/vim-coffee-script.git
-	ignore = untracked
-[submodule "bundle/tlib_vim"]
-	path = bundle/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
-	ignore = untracked
-[submodule "bundle/vim-addon-mw-utils"]
-	path = bundle/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-	ignore = untracked
-[submodule "bundle/vim-snipmate"]
-	path = bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
-	ignore = untracked
-[submodule "bundle/vim-snippets"]
-	path = bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
-	ignore = untracked
-[submodule "bundle/thumbnail.vim"]
-	path = bundle/thumbnail.vim
-	url = https://github.com/itchyny/thumbnail.vim.git
-	ignore = untracked
-[submodule "bundle/vim-ruby-refactoring"]
-	path = bundle/vim-ruby-refactoring
-	url = https://github.com/ecomba/vim-ruby-refactoring.git
-	ignore = untracked
-[submodule "bundle/switch.vim"]
-	path = bundle/switch.vim
-	url = https://github.com/AndrewRadev/switch.vim.git
-	ignore = untracked
-[submodule "bundle/rspec-vim"]
-	path = bundle/rspec-vim
-	url = git@github.com:hSATAC/rspec.vim.git
-	ignore = untracked
-[submodule "bundle/vim-indent-guides"]
-	path = bundle/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
-	ignore = untracked
-[submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
-	url = https://github.com/bling/vim-airline.git
-	ignore = untracked
-[submodule "bundle/vim-easymotion"]
-	path = bundle/vim-easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
-	ignore = untracked
-[submodule "bundle/xterm-color-table"]
-	path = bundle/xterm-color-table
-	url = https://github.com/guns/xterm-color-table.vim.git
-	ignore = untracked
-[submodule "bundle/vim-nerdtree-tabs"]
-	path = bundle/vim-nerdtree-tabs
-	url = https://github.com/jistr/vim-nerdtree-tabs.git
-	ignore = untracked
-[submodule "bundle/undotree"]
-	path = bundle/undotree
-	url = https://github.com/mbbill/undotree.git
-	ignore = untracked
-[submodule "bundle/vim-gocode-blackrush"]
-	path = bundle/vim-gocode-blackrush
-	url = git@github.com:Blackrush/vim-gocode.git
->>>>>>> 12317c528646f5fd58a262a9408a84cf7f0e530f
